@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priyanka Senthil Kumar — AI/ML Engineer</title>
+<meta name="description" content="Portfolio of Priyanka Senthil Kumar, AI/ML Engineer specializing in predictive modeling, Generative AI, and agentic ML pipelines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1c2230;
+    --navy:#1f2a44;
+    --maroon:#7d2438;
+    --maroon-deep:#5e1a2a;
+    --paper:#f3f0ea;
+    --paper-dim:#e9e4da;
+    --line: rgba(28,34,48,0.14);
+    --muted:#5b6270;
+    --max: 920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0;
+    color:var(--navy);
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+
+  /* ---------- Nav ---------- */
+  nav{
+    position:sticky; top:0; z-index:20;
+    background:rgba(243,240,234,0.88);
+    backdrop-filter: blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:16px; padding-bottom:16px;
+  }
+  .nav-name{font-family:'Fraunces', serif; font-weight:600; font-size:1.05rem; color:var(--navy); text-decoration:none;}
+  .nav-links{display:flex; gap:28px; font-size:0.92rem;}
+  .nav-links a{text-decoration:none; color:var(--muted); border-bottom:1px solid transparent; padding-bottom:2px; transition:border-color .15s, color .15s;}
+  .nav-links a:hover{color:var(--maroon); border-color:var(--maroon);}
+
+  /* ---------- Hero ---------- */
+  header.hero{padding:76px 0 64px;}
+  .hero-grid{
+    display:grid;
+    grid-template-columns: 1fr 240px;
+    gap:52px;
+    align-items:center;
+  }
+  .hero-eyebrow{
+    color:var(--maroon); font-weight:500; font-size:0.98rem; margin-bottom:14px;
+  }
+  h1.hero-title{font-size:clamp(2.2rem, 4.4vw, 3.15rem); line-height:1.08;}
+  .hero-role{
+    font-size:1.18rem; color:var(--navy); margin-top:10px; font-weight:500;
+    font-family:'IBM Plex Sans', sans-serif;
+  }
+  .hero-summary{max-width:56ch; color:var(--ink); margin-top:22px; font-size:1.03rem;}
+  .hero-contact{
+    display:flex; flex-wrap:wrap; gap:18px 26px; margin-top:28px; font-size:0.95rem;
+  }
+  .hero-contact a{text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px;}
+  .hero-contact a:hover{border-color:var(--maroon); color:var(--maroon);}
+
+  .resume-actions{display:flex; flex-wrap:wrap; gap:14px; margin-top:22px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'IBM Plex Sans', sans-serif; font-size:0.92rem; font-weight:500;
+    text-decoration:none; padding:11px 20px; border:1px solid var(--navy);
+    transition: background .15s, color .15s, border-color .15s;
+  }
+  .btn-solid{background:var(--navy); color:#fff;}
+  .btn-solid:hover{background:var(--maroon); border-color:var(--maroon);}
+  .btn-outline{background:transparent; color:var(--navy);}
+  .btn-outline:hover{color:var(--maroon); border-color:var(--maroon);}
+  .btn svg{width:15px; height:15px; flex-shrink:0;}
+
+  .headshot-frame{
+    width:240px; height:290px;
+    border:1px solid var(--line);
+    padding:10px;
+    background:#fff;
+    box-shadow: 6px 6px 0 var(--navy);
+  }
+  .headshot-frame img{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+
+  /* ---------- Section shell ---------- */
+  section{padding:58px 0;}
+  section + section{border-top:1px solid var(--line);}
+  .section-head{
+    display:flex; align-items:baseline; gap:16px; margin-bottom:34px;
+  }
+  .section-head h2{font-size:1.55rem;}
+  .section-index{
+    font-family:'IBM Plex Mono', monospace;
+    color:var(--maroon);
+    font-size:0.85rem;
+    letter-spacing:0.02em;
+  }
+
+  /* ---------- Experience ---------- */
+  .role{
+    display:grid;
+    grid-template-columns: 190px 1fr;
+    gap:28px;
+    padding:26px 0;
+    border-top:1px solid var(--line);
+  }
+  .role:first-of-type{border-top:none;}
+  .role-meta{color:var(--muted); font-size:0.92rem;}
+  .role-meta .dates{font-family:'IBM Plex Mono', monospace; font-size:0.82rem; color:var(--navy); display:block; margin-bottom:6px;}
+  .role h3{font-size:1.14rem; margin-bottom:2px;}
+  .role .org{color:var(--maroon); font-weight:500; font-size:0.98rem; margin-bottom:12px; display:block;}
+  .role ul{margin:0; padding-left:20px;}
+  .role li{margin-bottom:9px; color:var(--ink);}
+  .role li::marker{color:var(--maroon);}
+
+  /* ---------- Projects ---------- */
+  .project-featured{
+    border:1px solid var(--line);
+    background:#faf8f4;
+    padding:32px;
+    margin-bottom:22px;
+  }
+  .project-featured .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:0.78rem;
+    color:var(--maroon); text-transform:uppercase; letter-spacing:0.06em;
+  }
+  .project-featured h3{font-size:1.4rem; margin-top:10px;}
+  .project-featured .stack{color:var(--muted); font-size:0.88rem; margin-top:6px;}
+  .project-featured p{margin-top:14px; max-width:70ch;}
+  .project-featured .links{margin-top:16px; display:flex; gap:20px;}
+
+  .project-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+  }
+  .project-card{
+    border:1px solid var(--line);
+    padding:24px;
+    background:#fff;
+    display:flex; flex-direction:column;
+  }
+  .project-card h3{font-size:1.06rem;}
+  .project-card .stack{color:var(--muted); font-size:0.83rem; margin-top:6px;}
+  .project-card p{font-size:0.94rem; margin-top:12px; flex-grow:1;}
+  .project-card .links{margin-top:14px;}
+
+  a.pill{
+    text-decoration:none;
+    font-size:0.86rem;
+    color:var(--navy);
+    border-bottom:1px solid var(--navy);
+    padding-bottom:1px;
+  }
+  a.pill:hover{color:var(--maroon); border-color:var(--maroon);}
+
+  .project-photo{margin:22px 0 0; padding-top:20px; border-top:1px solid var(--line);}
+  .project-photo img{
+    width:100%; max-height:360px; object-fit:cover; display:block;
+    border:1px solid var(--line);
+  }
+  .project-photo figcaption{
+    margin-top:10px; font-size:0.85rem; color:var(--muted);
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery-grid{
+    display:grid;
+    grid-template-columns: 1.3fr 1fr;
+    grid-template-rows: auto auto;
+    gap:18px;
+  }
+  .gallery-item{
+    border:1px solid var(--line);
+    background:#fff;
+    padding:8px;
+    display:flex; flex-direction:column;
+  }
+  .gallery-item img{
+    width:100%; height:260px; object-fit:cover; display:block;
+  }
+  .gallery-item.wide{grid-row: span 1;}
+  .gallery-item figcaption{
+    font-size:0.85rem; color:var(--muted); padding:10px 6px 4px;
+  }
+
+  /* ---------- Skills ---------- */
+  .skills-list{display:flex; flex-direction:column; gap:18px;}
+  .skill-row{display:grid; grid-template-columns: 170px 1fr; gap:20px; align-items:baseline;}
+  .skill-row .cat{color:var(--maroon); font-weight:500; font-size:0.94rem;}
+  .skill-row .items{color:var(--ink); font-size:0.96rem;}
+
+  /* ---------- Education ---------- */
+  .edu h3{font-size:1.1rem;}
+  .edu .org{color:var(--maroon); font-weight:500;}
+  .edu .meta{color:var(--muted); font-size:0.9rem; margin-top:4px;}
+  .edu .coursework{margin-top:10px; font-size:0.93rem; color:var(--ink);}
+  .edu-entry{padding:22px 0; border-top:1px solid var(--line);}
+  .edu-entry:first-child{padding-top:0; border-top:none;}
+
+  /* ---------- Footer ---------- */
+  footer{padding:48px 0 64px;}
+  footer .wrap{
+    display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px;
+  }
+  footer h2{font-size:1.5rem; max-width:20ch;}
+  footer .contact-links{display:flex; flex-direction:column; gap:8px; font-size:0.95rem;}
+  footer .contact-links a{text-decoration:none; border-bottom:1px solid var(--line);}
+  footer .contact-links a:hover{color:var(--maroon); border-color:var(--maroon);}
+  .fine-print{color:var(--muted); font-size:0.82rem; margin-top:40px;}
+
+  @media (max-width:760px){
+    .hero-grid{grid-template-columns:1fr; gap:32px;}
+    .headshot-frame{order:-1; width:180px; height:220px;}
+    .role{grid-template-columns:1fr; gap:8px;}
+    .project-grid{grid-template-columns:1fr;}
+    .skill-row{grid-template-columns:1fr; gap:4px;}
+    .gallery-grid{grid-template-columns:1fr;}
+    .gallery-item img{height:220px;}
+    nav .wrap{flex-direction:column; align-items:flex-start; gap:10px;}
+    .nav-links{gap:18px; flex-wrap:wrap;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="nav-name" href="#top">Priyanka Senthil Kumar</a>
+    <div class="nav-links">
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="hero-eyebrow">AI/ML Engineer</div>
+      <h1 class="hero-title">Turning data into decisions, with models people can trust.</h1>
+      <p class="hero-summary">
+        4+ years building predictive models, generative AI applications, and RAG-based LLM pipelines
+        across AWS, Azure, and GCP. I work across the full ML lifecycle — from feature engineering to
+        production deployment — with a focus on agentic workflows that hold up under real business use.
+      </p>
+      <div class="hero-contact">
+        <a href="mailto:senthilkumar.pri@northeastern.edu">senthilkumar.pri@northeastern.edu</a>
+        <a href="tel:8573616942">857-361-6942</a>
+        <a href="https://github.com/priyanka-senthil" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/priyanka-25/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="resume-actions">
+        <a class="btn btn-solid" href="https://drive.google.com/file/d/1PxN0FkwiPVfwz1DSEouoAwmuj4qmblR-/view?usp=sharing" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          View resume
+        </a>
+        <a class="btn btn-outline" href="https://drive.google.com/uc?export=download&id=1PxN0FkwiPVfwz1DSEouoAwmuj4qmblR-" download="Priyanka_Senthil_Kumar_Resume.pdf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download resume
+        </a>
+      </div>
+    </div>
+    <div class="headshot-frame">
+      <img src="assets/hero-professional.jpg" alt="Portrait of Priyanka Senthil Kumar">
+    </div>
+  </div>
+</header>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-index">01</span>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="role">
+      <div class="role-meta">
+        <span class="dates">Jan 2025 – Aug 2025</span>
+        Boston, MA
+      </div>
+      <div>
+        <h3>Data Engineer</h3>
+        <span class="org">Forward Financing</span>
+        <ul>
+          <li>Built a RAG-based underwriting assistant that indexes financial documents and deal history into a vector store, letting underwriters query composite risk signals in natural language — cutting manual review time by ~40%.</li>
+          <li>Designed and deployed an agentic AI pipeline integrated with decisioning APIs that autonomously generates New Deal Composite Scores, chaining retrieval, scoring, and validation for consistent, scalable pipelines.</li>
+          <li>Developed an MCP-connected identity validation service using fuzzy matching and LLM-assisted entity resolution, giving downstream agents access to verified borrower context and reducing manual data reviews by ~25%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-meta">
+        <span class="dates">May 2024 – Dec 2024</span>
+        Boston, MA
+      </div>
+      <div>
+        <h3>Data Engineer</h3>
+        <span class="org">Northeastern University</span>
+        <ul>
+          <li>Automated asset capitalization processes with MS SQL Server and Airflow, reducing financial reporting time by 30% and improving data accuracy by 15%.</li>
+          <li>Built Tableau dashboards tracking capital asset utilization across university departments to support audit readiness.</li>
+          <li>Developed and maintained ETL workflows integrating Banner Finance, Cognos, and departmental sources, cutting manual reporting effort by 25%.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="role">
+      <div class="role-meta">
+        <span class="dates">Jun 2020 – Dec 2023</span>
+        Chennai, India
+      </div>
+      <div>
+        <h3>AI/ML Engineer</h3>
+        <span class="org">LatentView Analytics</span>
+        <ul>
+          <li>Developed predictive models for customer segmentation and retention for hospitality clients, contributing to an 18% increase in customer retention.</li>
+          <li>Analyzed 1M+ structured and unstructured credit card transactions to detect anomalies, improving marketing efficiency by 20% and reducing fraudulent transactions by 35%.</li>
+          <li>Built and deployed Python-based engines to automate customer decision workflows on scalable cloud ML pipelines.</li>
+          <li>Led end-to-end model lifecycle — feature engineering through deployment — using MLflow with scikit-learn and TensorFlow in Agile sprints, cutting deployment time by 30%.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-index">02</span>
+      <h2>Selected projects</h2>
+    </div>
+
+    <div class="project-featured">
+      <span class="tag">Featured · MLOps</span>
+      <h3>Financial Stress Test Platform</h3>
+      <div class="stack">Python · AWS/GCP · MLflow · GitHub Actions · FastAPI · Docker</div>
+      <p>
+        An end-to-end MLOps platform that generates realistic economic stress scenarios and predicts company
+        financial vulnerability. Three chained models — a VAE for scenario generation, LightGBM/XGBoost
+        forecasters, and a One-Class SVM for risk scoring — feed a FastAPI backend with SHAP-based
+        explainability, weekly drift detection, and automated retraining through a containerized CI/CD pipeline.
+      </p>
+      <div class="links">
+        <a class="pill" href="https://github.com/priyanka-senthil/Mlops_Project_FinancialCrises" target="_blank" rel="noopener">View code →</a>
+      </div>
+      <figure class="project-photo">
+        <img src="assets/google-cambridge-team.jpg" alt="Priyanka and teammates presenting the Financial Stress Test Platform at Google's Cambridge office, with the Northeastern University and Google logos on screen behind them">
+        <figcaption>Presenting this project at Google's Cambridge office alongside the Northeastern team.</figcaption>
+      </figure>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Malaria Parasite Detection</h3>
+        <div class="stack">Python · Deep Learning · Computer Vision</div>
+        <p>An image classification model trained to identify malaria parasites in blood smear images, applying convolutional neural networks to a medical diagnostics problem.</p>
+        <div class="links">
+          <a class="pill" href="https://github.com/priyanka-senthil/Malaria-Parasite-Detection" target="_blank" rel="noopener">View code →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Medical Insurance Cost Prediction</h3>
+        <div class="stack">Python · TensorFlow</div>
+        <p>A regression model built with TensorFlow to predict individual medical insurance costs from demographic and health features.</p>
+        <div class="links">
+          <a class="pill" href="https://github.com/priyanka-senthil/Medical-Insurance-Cost-Prediction-using-TensorFlow" target="_blank" rel="noopener">View code →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Urban Spatial Order</h3>
+        <div class="stack">Python · Spatial Analysis</div>
+        <p>An exploration of spatial patterns and structure in urban data, applying data analysis techniques to understand how cities organize themselves.</p>
+        <div class="links">
+          <a class="pill" href="https://github.com/priyanka-senthil/Urban_Spatial_Order" target="_blank" rel="noopener">View code →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Project Gutenberg</h3>
+        <div class="stack">Python · NLP</div>
+        <p>Text analysis and processing work built on the Project Gutenberg corpus, applying NLP techniques to a large, open literary dataset.</p>
+        <div class="links">
+          <a class="pill" href="https://github.com/priyanka-senthil/Project_Gutenberg" target="_blank" rel="noopener">View code →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Database Management System</h3>
+        <div class="stack">SQL · Database Design</div>
+        <p>Coursework project covering relational database design, normalization, and query optimization for a structured application domain.</p>
+        <div class="links">
+          <a class="pill" href="https://github.com/priyanka-senthil/Database_Management_System" target="_blank" rel="noopener">View code →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>Mapping the Landscape of Generative AI Research</h3>
+        <div class="stack">Bibliometrics · Web of Science</div>
+        <p>A bibliometric study mapping trends, clusters, and influential work in generative AI research using Web of Science data.</p>
+        <div class="links">
+          <a class="pill" href="https://github.com/priyanka-senthil/Mapping-the-Landscape-of-Generative-AI-Research-through-Web-of-Science" target="_blank" rel="noopener">View code →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-index">03</span>
+      <h2>Gallery</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item wide">
+        <img src="assets/graduation-fenway.jpg" alt="Priyanka in her graduation cap and gown at Northeastern University's commencement ceremony at Fenway Park">
+        <figcaption>Commencement 2026 — M.S. in Data Analytics Engineering, Northeastern University.</figcaption>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/graduation-campus.jpg" alt="Priyanka sitting on the Northeastern University sign on campus, holding her graduation cap">
+        <figcaption>On campus after commencement.</figcaption>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/google-cambridge-team.jpg" alt="Priyanka and her project team presenting at Google's Cambridge office">
+        <figcaption>Presenting the Financial Stress Test Platform at Google, Cambridge.</figcaption>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/hero-professional.jpg" alt="Priyanka in professional attire at Google's Cambridge office">
+        <figcaption>At Google's Cambridge office for the project showcase.</figcaption>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-index">04</span>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-list">
+      <div class="skill-row">
+        <span class="cat">Programming &amp; analytics</span>
+        <span class="items">Python, R, SQL, PySpark, Ruby on Rails, Pandas, NumPy, SciPy, Tableau, Power BI</span>
+      </div>
+      <div class="skill-row">
+        <span class="cat">Machine learning &amp; AI</span>
+        <span class="items">scikit-learn, TensorFlow, XGBoost, deep learning, NLP, LLMs, generative AI, agentic AI, vision transformers, MLOps, MLflow</span>
+      </div>
+      <div class="skill-row">
+        <span class="cat">Cloud &amp; big data</span>
+        <span class="items">GCP (BigQuery, Vertex AI), AWS (S3, Lambda, SageMaker, Bedrock), Azure (ADF, Databricks, Unity Catalog, AI Foundry), Snowflake</span>
+      </div>
+      <div class="skill-row">
+        <span class="cat">Data engineering</span>
+        <span class="items">Databricks, Airflow, PostgreSQL, MySQL, SQL Server, Delta Lake, Docker, Git, GitHub Actions, dbt, ETL, Agile/Scrum</span>
+      </div>
+      <div class="skill-row">
+        <span class="cat">Statistics</span>
+        <span class="items">A/B testing, hypothesis testing, time-series analysis, Bayesian inference, EDA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-index">05</span>
+      <h2>Education</h2>
+    </div>
+    <div class="edu">
+      <div class="edu-entry">
+        <h3>M.S. in Data Analytics Engineering</h3>
+        <span class="org">Northeastern University</span>
+        <div class="meta">Jan 2024 – Apr 2026 · Boston, MA · GPA 3.8/4.0</div>
+        <div class="coursework">Coursework: Database Management Systems, Data Structures, Machine Learning Operations, Data Warehousing</div>
+      </div>
+      <div class="edu-entry">
+        <h3>B.E. in Electronics and Communication Engineering</h3>
+        <span class="org">PSG College of Technology</span>
+        <div class="meta">May 2020 · Coimbatore, India · GPA 3.6/4.0</div>
+        <div class="coursework">Coursework: Computer Networks, Computer Communication Networks, Data Structures and Algorithms, Machine Learning Algorithms</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's talk about your data.</h2>
+    <div class="contact-links">
+      <a href="mailto:senthilkumar.pri@northeastern.edu">senthilkumar.pri@northeastern.edu</a>
+      <a href="tel:8573616942">857-361-6942</a>
+      <a href="https://github.com/priyanka-senthil" target="_blank" rel="noopener">github.com/priyanka-senthil</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
