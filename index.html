@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Priyanka Senthil Kumar — AI/ML Engineer</title>
-<meta name="description" content="Portfolio of Priyanka Senthil Kumar, AI/ML Engineer specializing in predictive modeling, Generative AI, and agentic ML pipelines.">
+<meta name="description" content="Portfolio of Priyanka Senthil Kumar, AI/ML Engineer specializing in Generative AI, RAG, agentic AI pipelines, and production ML systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -126,7 +126,7 @@
     padding:26px 0;
     border-top:1px solid var(--line);
   }
-  .role:first-of-type{border-top:none;}
+  .section-head + .role{border-top:none;}
   .role-meta{color:var(--muted); font-size:0.92rem;}
   .role-meta .dates{font-family:'IBM Plex Mono', monospace; font-size:0.82rem; color:var(--navy); display:block; margin-bottom:6px;}
   .role h3{font-size:1.14rem; margin-bottom:2px;}
@@ -270,9 +270,9 @@
       <div class="hero-eyebrow">AI/ML Engineer</div>
       <h1 class="hero-title">Turning data into decisions, with models people can trust.</h1>
       <p class="hero-summary">
-        4+ years building predictive models, generative AI applications, and RAG-based LLM pipelines
-        across AWS, Azure, and GCP. I work across the full ML lifecycle — from feature engineering to
-        production deployment — with a focus on agentic workflows that hold up under real business use.
+        4+ years developing and deploying production ML systems across AWS and GCP, specializing in
+        Generative AI, LLM integration, and agentic AI pipelines. I work across the full ML lifecycle,
+        from feature engineering to deployment, and build explainable, reliable AI for high-stakes environments.
       </p>
       <div class="hero-contact">
         <a href="mailto:senthilkumar.pri@northeastern.edu">senthilkumar.pri@northeastern.edu</a>
@@ -310,12 +310,12 @@
         Boston, MA
       </div>
       <div>
-        <h3>Data Engineer</h3>
+        <h3>AI Engineer</h3>
         <span class="org">Forward Financing</span>
         <ul>
-          <li>Built a RAG-based underwriting assistant that indexes financial documents and deal history into a vector store, letting underwriters query composite risk signals in natural language — cutting manual review time by ~40%.</li>
-          <li>Designed and deployed an agentic AI pipeline integrated with decisioning APIs that autonomously generates New Deal Composite Scores, chaining retrieval, scoring, and validation for consistent, scalable pipelines.</li>
-          <li>Developed an MCP-connected identity validation service using fuzzy matching and LLM-assisted entity resolution, giving downstream agents access to verified borrower context and reducing manual data reviews by ~25%.</li>
+          <li>Built a RAG underwriting assistant with OpenAI embeddings, Milvus, and GPT-4o-mini that answered questions with page-level citations, cutting merchant document review time from 10–15 to 2–3 minutes in prototype testing.</li>
+          <li>Developed an agentic AI pipeline with Temporal and LangGraph combining Snowflake features, Taktile risk scoring, and an LLM agent that escalated unresolved data conflicts to underwriters, reducing underwriting review time by 50%.</li>
+          <li>Engineered a Model Context Protocol (MCP) identity validation service using fuzzy matching and LLM-assisted entity resolution, supplying verified borrower data to downstream agents and reducing manual identity reviews by 25%.</li>
         </ul>
       </div>
     </div>
@@ -329,9 +329,9 @@
         <h3>Data Engineer</h3>
         <span class="org">Northeastern University</span>
         <ul>
-          <li>Automated asset capitalization processes with MS SQL Server and Airflow, reducing financial reporting time by 30% and improving data accuracy by 15%.</li>
-          <li>Built Tableau dashboards tracking capital asset utilization across university departments to support audit readiness.</li>
-          <li>Developed and maintained ETL workflows integrating Banner Finance, Cognos, and departmental sources, cutting manual reporting effort by 25%.</li>
+          <li>Automated asset capitalization workflows using MS SQL Server and Apache Airflow, reducing financial reporting time by 30% and improving data accuracy by 15%.</li>
+          <li>Developed and maintained ETL pipelines consolidating Banner Finance, Cognos, and departmental data into asset-tracking datasets, reducing manual reporting effort by 25% for finance and audit teams.</li>
+          <li>Designed and maintained 6+ Tableau dashboards for finance and audit teams to track capital assets, monitor financial records, and support internal audit preparation and compliance.</li>
         </ul>
       </div>
     </div>
@@ -345,10 +345,10 @@
         <h3>AI/ML Engineer</h3>
         <span class="org">LatentView Analytics</span>
         <ul>
-          <li>Developed predictive models for customer segmentation and retention for hospitality clients, contributing to an 18% increase in customer retention.</li>
-          <li>Analyzed 1M+ structured and unstructured credit card transactions to detect anomalies, improving marketing efficiency by 20% and reducing fraudulent transactions by 35%.</li>
-          <li>Built and deployed Python-based engines to automate customer decision workflows on scalable cloud ML pipelines.</li>
-          <li>Led end-to-end model lifecycle — feature engineering through deployment — using MLflow with scikit-learn and TensorFlow in Agile sprints, cutting deployment time by 30%.</li>
+          <li>Engineered Random Forest propensity models on 6M training records for Hilton–Amex direct-mail targeting, improving Base card enrollment capture from 48% to 57.9% (+9.9 pp) among the top 8M ranked customers.</li>
+          <li>Designed a destination recommendation system for Hilton using K-Means clustering, Truncated SVD, and geospatial mapping, expanding recommendation coverage by 70% (50M to 85M customers).</li>
+          <li>Developed XGBoost customer segmentation and churn models, benchmarked against a logistic regression baseline, enabling targeted retention campaigns that increased guest retention by 20% in targeted segments.</li>
+          <li>Operationalized Python ML pipelines with MLflow tracking and model registry for scikit-learn and TensorFlow models, adding automated fairness and bias checks and cutting production deployment time by 30%.</li>
         </ul>
       </div>
     </div>
@@ -365,7 +365,7 @@
     <div class="project-featured">
       <span class="tag">Featured · MLOps</span>
       <h3>Financial Stress Test Platform</h3>
-      <div class="stack">Python · AWS/GCP · MLflow · GitHub Actions · FastAPI · Docker</div>
+      <div class="stack">Python · GCP · MLflow · GitHub Actions · FastAPI · Docker</div>
       <p>
         An end-to-end MLOps platform that generates realistic economic stress scenarios and predicts company
         financial vulnerability. Three chained models — a VAE for scenario generation, LightGBM/XGBoost
@@ -382,6 +382,24 @@
     </div>
 
     <div class="project-grid">
+      <div class="project-card">
+        <h3>CareAI: HIV Information Assistant</h3>
+        <div class="stack">Python · Gemini · Vertex AI · Embeddings · Streamlit</div>
+        <p>An agentic RAG assistant that gives people living with HIV verified answers, using triage, routing across 5 intents, and LLM orchestration with Google Gemini Pro over 21 CDC and NIH pages. Applies LLM fine-tuning on Vertex AI, with safety routing that sent 100% of emergency and crisis test cases to fixed 911/988 safety replies.</p>
+        <div class="links">
+          <a class="pill" href="https://github.com/priyanka-senthil/Care_AI_HIV" target="_blank" rel="noopener">View code →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <h3>YouTube Trending Data Pipeline</h3>
+        <div class="stack">AWS Lambda · Glue · Step Functions · S3 · Athena · PySpark</div>
+        <p>An AWS Medallion Architecture (Bronze/Silver/Gold) ETL pipeline that ingests, transforms, and analyzes YouTube trending data across 10 regions, orchestrated with Step Functions, with data quality checks, SNS failure alerts, and Athena-queryable analytics tables.</p>
+        <div class="links">
+          <a class="pill" href="https://github.com/priyanka-senthil/youtube-trending-analysis-data-piepline" target="_blank" rel="noopener">View code →</a>
+        </div>
+      </div>
+
       <div class="project-card">
         <h3>Malaria Parasite Detection</h3>
         <div class="stack">Python · Deep Learning · Computer Vision</div>
@@ -479,15 +497,23 @@
       </div>
       <div class="skill-row">
         <span class="cat">Machine learning &amp; AI</span>
-        <span class="items">scikit-learn, TensorFlow, XGBoost, deep learning, NLP, LLMs, generative AI, agentic AI, vision transformers, MLOps, MLflow</span>
+        <span class="items">scikit-learn, TensorFlow, PyTorch, XGBoost, LightGBM, deep learning, NLP, vision transformers, MLOps, MLflow</span>
+      </div>
+      <div class="skill-row">
+        <span class="cat">Generative AI &amp; LLM systems</span>
+        <span class="items">Generative AI, agentic AI, LLMs, RAG, LangGraph, MCP, LLM fine-tuning, vector databases (Pinecone, Milvus), prompt engineering</span>
+      </div>
+      <div class="skill-row">
+        <span class="cat">Responsible AI</span>
+        <span class="items">SHAP explainability, model evaluation, bias and fairness assessment, model drift detection</span>
       </div>
       <div class="skill-row">
         <span class="cat">Cloud &amp; big data</span>
-        <span class="items">GCP (BigQuery, Vertex AI), AWS (S3, Lambda, SageMaker, Bedrock), Azure (ADF, Databricks, Unity Catalog, AI Foundry), Snowflake</span>
+        <span class="items">GCP (GCS, Cloud Run, BigQuery, Vertex AI), AWS (S3, Lambda, Glue, Step Functions, Athena, SageMaker, Bedrock), Azure (ADF, Databricks, Unity Catalog, AI Foundry), Snowflake</span>
       </div>
       <div class="skill-row">
         <span class="cat">Data engineering</span>
-        <span class="items">Databricks, Airflow, PostgreSQL, MySQL, SQL Server, Delta Lake, Docker, Git, GitHub Actions, dbt, ETL, Agile/Scrum</span>
+        <span class="items">Databricks, Airflow, PostgreSQL, MySQL, SQL Server, Delta Lake, Docker, FastAPI, Git, GitHub Actions, CI/CD, dbt, ETL, Agile/Scrum</span>
       </div>
       <div class="skill-row">
         <span class="cat">Statistics</span>
@@ -508,7 +534,7 @@
         <h3>M.S. in Data Analytics Engineering</h3>
         <span class="org">Northeastern University</span>
         <div class="meta">Jan 2024 – Apr 2026 · Boston, MA · GPA 3.8/4.0</div>
-        <div class="coursework">Coursework: Database Management Systems, Data Structures, Machine Learning Operations, Data Warehousing</div>
+        <div class="coursework">Coursework: Data Mining, Neural Networks and Deep Learning, Machine Learning Operations, Foundations of Artificial Intelligence</div>
       </div>
       <div class="edu-entry">
         <h3>B.E. in Electronics and Communication Engineering</h3>
@@ -526,6 +552,7 @@
     <div class="contact-links">
       <a href="mailto:senthilkumar.pri@northeastern.edu">senthilkumar.pri@northeastern.edu</a>
       <a href="tel:8573616942">857-361-6942</a>
+      <a href="https://www.linkedin.com/in/priyanka-25/" target="_blank" rel="noopener">linkedin.com/in/priyanka-25</a>
       <a href="https://github.com/priyanka-senthil" target="_blank" rel="noopener">github.com/priyanka-senthil</a>
     </div>
   </div>
